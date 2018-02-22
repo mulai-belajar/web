@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 60px;
+  height: 40px;
   display: flex;
   margin: 10px 10px;
 }
@@ -21,6 +21,14 @@
 
 .App-intro {
   font-size: large;
+}
+
+.no-border-radius {
+  border-radius: 0 !important
+}
+
+.Featured {
+  margin-left: 120px;
 }
 
 @keyframes App-logo-spin {
