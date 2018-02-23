@@ -8,7 +8,7 @@ import {Grid} from 'semantic-ui-react'
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (<Router>
       <Grid columns={1}>
