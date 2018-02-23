@@ -11,22 +11,17 @@ export default class MenuExampleSizeLarge extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu>
-
+      <Menu  className="navigasiright">
         <Menu.Menu position='right'>
-          <Menu.Item name='Tentang' active={activeItem === 'home'} onClick={this.handleItemClick} />
-          <Menu.Item name='Kontak' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-          <Menu.Item name='Faq' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-          <Dropdown item text='Masuk'>
+          <Menu.Item>
+             <Button color='teal'>Buat Kelas</Button>
+          </Menu.Item>
+          <Dropdown className='dropmenu' item text='UserName'>
             <Dropdown.Menu>
-              <Dropdown.Item>Masuk Sebagai Donatur</Dropdown.Item>
-              <Dropdown.Item>Masuk Sebagai Pengajar</Dropdown.Item>
+              <Dropdown.Item>Ubah Data</Dropdown.Item>
+              <Dropdown.Item>Keluar</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-
-          <Menu.Item>
-            <Button primary>Daftar</Button>
-          </Menu.Item>
         </Menu.Menu>
       </Menu>
     )
