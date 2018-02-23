@@ -13,12 +13,12 @@ const ItemExampleDivided = () => (
       <Item.Content className="box-list-tulisan">
       <Item.Header as='a'>Header</Item.Header>
       <Item.Meta>By:Fikri</Item.Meta>
-      <Item.Meta>Mengajar Ngaji Di daerah Pelosok</Item.Meta>
+      <Item.Meta>Mengajar Ngaji Di daerah Pelosok NTB</Item.Meta>
       <Item.Meta>Target Dana</Item.Meta>
       <Item.Meta>
         <h3>Rp 2,000,000</h3>
       </Item.Meta>
-        <Progress value='3' total='6' progress='percent' />
+        <Progress value='3' total='6' progress='percent'success />
         <h2>Sudah Terkumpul:</h2><h3>Rp 1,000,000</h3>
       <Button positive>Positive Button</Button>
     </Item.Content>
