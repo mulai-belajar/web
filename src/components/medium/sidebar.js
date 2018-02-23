@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Grid, Menu } from 'semantic-ui-react'
 
 export default class Sidebar extends Component {
   handleItemClick = name => this.setState({ activeItem: name })
@@ -8,6 +8,8 @@ export default class Sidebar extends Component {
     const { activeItem } = this.state || {}
 
     return (
+      <Grid columns={1} padded>
+      <Grid.Column>
       <Menu vertical>
         <Menu.Item>
           <Menu.Header>Kategori</Menu.Header>
@@ -26,6 +28,8 @@ export default class Sidebar extends Component {
           </Menu.Menu>
         </Menu.Item>
       </Menu>
+    </Grid.Column>
+    </Grid>
     )
   }
 }
