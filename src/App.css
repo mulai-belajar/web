@@ -21,7 +21,6 @@ body {}
   box-shadow: none !important;
 }
 
-
 .App-logo {
   height: 40px;
   display: flex;
@@ -33,6 +32,7 @@ body {}
   height: 120px;
   padding: 20px;
   color: white;
+}
 
 .circle {
   -moz-border-radius: 50px !important;
@@ -78,6 +78,7 @@ body {}
   to {
     transform: rotate(360deg);
   }
+}
 
 .box-list-tulisan {
   padding: 30px !important;
