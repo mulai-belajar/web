@@ -10,18 +10,20 @@ const GridExampleVerticallyDivided = () => (
 <div>
 
            <MenuNav />
-          <Grid celled>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <MenuProUser />
-            </Grid.Column>
-            <Grid.Column width={13}>
-              <BoxOverview />
-              <ListKelas />
-            </Grid.Column>
-          </Grid.Row>
+          <div className="box-user-page">
+            <Grid celled>
+            <Grid.Row>
+              <Grid.Column width={3}>
+                <MenuProUser />
+              </Grid.Column>
+              <Grid.Column width={13}>
+                <BoxOverview />
+                <ListKelas />
+              </Grid.Column>
+            </Grid.Row>
 
-        </Grid>
+            </Grid>
+          </div>
 </div>
 
 )

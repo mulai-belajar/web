@@ -16,7 +16,7 @@ export default class MenuExampleSizeLarge extends Component {
           <Menu.Item>
              <Button color='teal'>Buat Kelas</Button>
           </Menu.Item>
-          <Dropdown className='dropmenu' item text='UserName'>
+          <Dropdown className='dropmenu' item text='fikri'>
             <Dropdown.Menu>
               <Dropdown.Item>Ubah Data</Dropdown.Item>
               <Dropdown.Item>Keluar</Dropdown.Item>

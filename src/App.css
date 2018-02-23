@@ -49,3 +49,19 @@ body {}
   border-radius: 5px !important;
   margin-top: 20px !important;
 }
+
+.box-list-tulisan {
+  padding: 30px !important;
+}
+
+.box-list img {
+  width: 280px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.box-user-page {
+  margin-left: 40px !important;
+  margin-right: 40px !important;
+}

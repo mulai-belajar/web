@@ -1,60 +1,28 @@
 import React from 'react'
-import { Button, Icon, Image as ImageComponent, Item, Label,Progress } from 'semantic-ui-react'
+import { Button, Icon, Image as ImageComponent, Item, Label,Progress,Grid,Image} from 'semantic-ui-react'
 import '../../App.css'
 
 
 const ItemExampleDivided = () => (
   <Item.Group divided>
     <Item className="box-list">
-      <Item.Image src='../../img/ngaji.jpg' />
+      <Grid.Column width={3}>
+              <Image src='./img/ngaji.jpg' />
+      </Grid.Column>
 
-      <Item.Content>
-        <Item.Header as='a'>Kelas Mengaji Juz 30</Item.Header>
-        <Item.Meta>
-          <span className='cinema'>Nusa Tenggara Timur</span>
-        </Item.Meta>
-        <Item.Description><p>Short Description About Class</p></Item.Description>
-        <Item.Extra>
-          <Label>By Fahri</Label>
-          <Label icon='globe' content='Religion' />
-        </Item.Extra>
-        <Progress value='4' total='5' progress='percent' />
-        <Item.Extra>
-        <h2>Rp 2,000,000</h2>
-        </Item.Extra>
-        <Item.Extra>
-          <Button primary floated='right'>
-            Detail Kelas
-            <Icon name='right chevron' />
-          </Button>
-        </Item.Extra>
-      </Item.Content>
-    </Item>
+      <Item.Content className="box-list-tulisan">
+      <Item.Header as='a'>Header</Item.Header>
+      <Item.Meta>By:Fikri</Item.Meta>
+      <Item.Meta>Mengajar Ngaji Di daerah Pelosok</Item.Meta>
+      <Item.Meta>Target Dana</Item.Meta>
+      <Item.Meta>
+        <h3>Rp 2,000,000</h3>
+      </Item.Meta>
+        <Progress value='3' total='6' progress='percent' />
+        <h2>Sudah Terkumpul:</h2><h3>Rp 1,000,000</h3>
+      <Button positive>Positive Button</Button>
+    </Item.Content>
 
-    <Item className="box-list">
-      <Item.Image src='../../img/ngaji.jpg' />
-
-      <Item.Content>
-        <Item.Header as='a'>Kelas Mengaji Juz 30</Item.Header>
-        <Item.Meta>
-          <span className='cinema'>Nusa Tenggara Timur</span>
-        </Item.Meta>
-        <Item.Description><p>Short Description About Class</p></Item.Description>
-        <Item.Extra>
-          <Label>By Fahri</Label>
-          <Label icon='globe' content='Religion' />
-        </Item.Extra>
-        <Progress value='4' total='5' progress='percent' />
-        <Item.Extra>
-        <h2>Rp 2,000,000</h2>
-        </Item.Extra>
-        <Item.Extra>
-          <Button primary floated='right'>
-            Detail Kelas
-            <Icon name='right chevron' />
-          </Button>
-        </Item.Extra>
-      </Item.Content>
     </Item>
 
   </Item.Group>
