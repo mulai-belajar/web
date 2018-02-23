@@ -4,7 +4,7 @@ import '../../App.css'
 
 const CardExampleImageCard = () => (
   <Card className="box-user">
-    <Image  className="circle"src='../../img/profile.jpg' />
+    <Image src='../../img/profile.jpg' size='medium' circular />
     <Card.Content>
       <Card.Header>Fikri Muhammad</Card.Header>
     </Card.Content>
