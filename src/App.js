@@ -5,6 +5,7 @@ import MenuNav from './components/medium/navigation'
 import ListKelas from './components/medium/list-kelas'
 import BoxOverview from './components/medium/box-overview'
 import MenuProUser from './components/medium/profile-menu-user'
+import FormOrderKelas from './components/medium/form-buat-kelas'
 
 const GridExampleVerticallyDivided = () => (
 <div>
@@ -17,8 +18,7 @@ const GridExampleVerticallyDivided = () => (
                 <MenuProUser />
               </Grid.Column>
               <Grid.Column width={13}>
-                <BoxOverview />
-                <ListKelas />
+                <FormOrderKelas />
               </Grid.Column>
             </Grid.Row>
 
