@@ -1,34 +1,31 @@
 import 'semantic-ui-css/semantic.min.css';
 import React, { Component } from 'react'
-import { Button, Dropdown, Menu } from 'semantic-ui-react'
+import { Button, Dropdown, Menu,Grid, Image } from 'semantic-ui-react'
+import MenuNav from './components/medium/navigation'
+import ListKelas from './components/medium/list-kelas'
+import BoxOverview from './components/medium/box-overview'
+import MenuProUser from './components/medium/profile-menu-user'
+import FormOrderKelas from './components/medium/form-buat-kelas'
 
-export default class MenuExampleSizeLarge extends Component {
-  state = { activeItem: 'home' }
+const GridExampleVerticallyDivided = () => (
+<div>
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+           <MenuNav />
+          <div className="box-user-page">
+            <Grid celled>
+            <Grid.Row>
+              <Grid.Column width={3}>
+                <MenuProUser />
+              </Grid.Column>
+              <Grid.Column width={13}>
+                <FormOrderKelas />
+              </Grid.Column>
+            </Grid.Row>
 
-  render() {
-    const { activeItem } = this.state
+            </Grid>
+          </div>
+</div>
 
-    return (
-      <Menu>
+)
 
-        <Menu.Menu position='right'>
-          <Menu.Item name='Tentang' active={activeItem === 'home'} onClick={this.handleItemClick} />
-          <Menu.Item name='Kontak' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-          <Menu.Item name='Faq' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-          <Dropdown item text='Masuk'>
-            <Dropdown.Menu>
-              <Dropdown.Item>Masuk Sebagai Donatur</Dropdown.Item>
-              <Dropdown.Item>Masuk Sebagai Pengajar</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-
-          <Menu.Item>
-            <Button primary>Daftar</Button>
-          </Menu.Item>
-        </Menu.Menu>
-      </Menu>
-    )
-  }
-}
+export default GridExampleVerticallyDivided
