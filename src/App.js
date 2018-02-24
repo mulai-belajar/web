@@ -36,6 +36,13 @@ export default class App extends Component {
           {
             isAuthenticated() && (
               <Menu.Item>
+                <Button onClick={this.goTo.bind(this, 'profile')} primary>Profile</Button>
+              </Menu.Item>
+            )
+          }
+          {
+            isAuthenticated() && (
+              <Menu.Item>
                 <Button onClick={this.logout.bind(this)} negative>Logout</Button>
               </Menu.Item>
             )

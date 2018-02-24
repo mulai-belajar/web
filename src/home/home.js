@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class Home extends Component {
   login() {
-    this.props.auth.login();
+    this.props.auth.login()
   }
   render() {
-    const { isAuthenticated } = this.props.auth;
+    const { isAuthenticated } = this.props.auth
     return (
-      <div className="container">
+      <div>
         {
           isAuthenticated() && (
               <h4>
@@ -23,7 +23,7 @@ export default class Home extends Component {
                   style={{ cursor: 'pointer' }}
                   onClick={this.login.bind(this)}
                 >
-                  Log In
+                  Login
                 </a>
                 {' '}to continue.
               </h4>
