@@ -3,33 +3,37 @@ import React, { Component } from 'react'
 import { Button, Dropdown, Menu,Grid, Image } from 'semantic-ui-react'
 import './App.css'
 import MenuNav from './components/medium/navigation'
-import ListKelas from './components/medium/list-kelas'
-import BoxOverview from './components/medium/box-overview'
 import MenuProUser from './components/medium/profile-menu-user'
-import FormOrderKelas from './components/medium/form-buat-kelas'
-import Table from './components/medium/table-donasi'
+
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom'
+
+import HomeUser from './components/large/home'
+import KelasUser from './components/large/kelas-saya'
+import DonasiUser from './components/large/donasi-saya'
 
 const GridExampleVerticallyDivided = () => (
-<div>
-
-           <MenuNav />
-          <div  className="box-user-page">
-            <Grid>
-            <Grid.Row  className="box-noborder">
-              <Grid.Column width={3}>
-                <MenuProUser />
-              </Grid.Column>
-              <Grid.Column width={13}>
-                <BoxOverview />
-                <ListKelas />
-                <Table />
-              </Grid.Column>
-            </Grid.Row>
-
-            </Grid>
-          </div>
-</div>
-
+  <Router>
+    <div>
+      <MenuNav />
+      <div  className="box-user-page">
+      <Grid>
+        <Grid.Row  className="box-noborder">
+          <Grid.Column width={3}>
+            <MenuProUser />
+          </Grid.Column>
+          <Grid.Column width={13}>
+            <Route exact path='/' component={HomeUser} />
+            <Route path='/kelas-user' component={KelasUser} />
+            <Route path='/donasi-user' component={DonasiUser} />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+      </div>
+    </div>
+  </Router>
 )
 
 export default GridExampleVerticallyDivided
