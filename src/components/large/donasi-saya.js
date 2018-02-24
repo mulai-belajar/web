@@ -9,12 +9,11 @@ import MenuProUser from '../medium/profile-menu-user'
 import FormOrderKelas from '../medium/form-buat-kelas'
 import Table from '../medium/table-donasi'
 
-const HomeUser = () => (
-<div>
-                <BoxOverview />
-                <ListKelas />
+const DonasiUser = () => (
+              <div>
                 <Table />
               </div>
+
 )
 
-export default HomeUser
+export default DonasiUser
