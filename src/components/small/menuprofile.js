@@ -12,6 +12,7 @@ export default class MenuExampleLinkItem extends Component {
         <Menu vertical>
           <Menu.Item href=''>Beranda</Menu.Item>
           <Menu.Item>Kelas Saya</Menu.Item>
+          <Menu.Item>Donasi Saya</Menu.Item>
           <Menu.Item>Akun saya</Menu.Item>
           <Menu.Item>Keluar</Menu.Item>
         </Menu>

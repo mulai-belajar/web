@@ -7,6 +7,7 @@ import ListKelas from './components/medium/list-kelas'
 import BoxOverview from './components/medium/box-overview'
 import MenuProUser from './components/medium/profile-menu-user'
 import FormOrderKelas from './components/medium/form-buat-kelas'
+import Table from './components/medium/table-donasi'
 
 const GridExampleVerticallyDivided = () => (
 <div>
@@ -21,6 +22,7 @@ const GridExampleVerticallyDivided = () => (
               <Grid.Column width={13}>
                 <BoxOverview />
                 <ListKelas />
+                <Table />
               </Grid.Column>
             </Grid.Row>
 
