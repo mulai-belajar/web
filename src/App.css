@@ -14,6 +14,14 @@ body {}
   border-left: none !important;
 }
 
+.footer-list {
+  padding-right: 100px;
+}
+
+.aligned {
+  padding-top: 25px;
+}
+
 .box-user {
   width: 210px !important;
   height: auto;
@@ -99,4 +107,25 @@ body {}
 
 .box-noborder {
   border: none !important;
+}
+
+.donation-header {
+  padding-left: 150px !important;
+  padding-top: 30px;
+}
+
+.donation-form {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding-left: 150px !important;
+  padding-top: 30px;
+}
+
+.donation-content {
+  text-align: justify;
+  padding-left: 150px !important;
+  padding-top: 25px;
+  padding-bottom: 45px;
 }
