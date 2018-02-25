@@ -11,10 +11,10 @@ const DonationHeader = () => (
           <Feed>
            <Feed.Event>
              <Feed.Label>
-              <Image src='/images/andrew.jpg' />
+               <Image src='/images/andrew.jpg' size='tiny' circular/>
              </Feed.Label>
              <Feed.Content>
-               Inisiator: <a>Andrew</a>
+                Inisiator: <a>Andrew</a>
              </Feed.Content>
             </Feed.Event>
           </Feed>
