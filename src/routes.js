@@ -3,6 +3,7 @@ import { Redirect, Route, Router } from 'react-router-dom'
 import App from './App'
 import Home from './home/home'
 import Profile from './profile/profile'
+import Ping from './api/api'
 import Callback from './callback/callback'
 import Auth from './auth/auth'
 import history from './auth/history'
@@ -26,6 +27,13 @@ export const makeMainRoutes = () => {
               <Redirect to="/home"/>
             ) : (
               <Profile auth={auth} {...props} />
+            )
+          )} />
+        <Route path="/ping" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Ping auth={auth} {...props} />
             )
           )} />
           <Route path="/callback" render={(props) => {

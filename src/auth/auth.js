@@ -7,9 +7,9 @@ export default class Auth {
     domain: AUTH_CONFIG.domain,
     clientID: AUTH_CONFIG.clientId,
     redirectUri: AUTH_CONFIG.callbackUrl,
-    audience: `https://${AUTH_CONFIG.domain}/userinfo`,
+    audience: AUTH_CONFIG.audience,
     responseType: 'token id_token',
-    scope: 'openid profile'
+    scope: 'openid profile read:category'
   });
 
   userProfile
@@ -56,6 +56,14 @@ export default class Auth {
       throw new Error('No access token found')
     }
     return accessToken
+  }
+
+  getIdToken() {
+    const idToken = localStorage.getItem('id_token')
+    if (!idToken) {
+      throw new Error('No id token found')
+    }
+    return idToken
   }
 
   getProfile(cb) {

@@ -18,6 +18,7 @@ export default class App extends Component {
     const { isAuthenticated } = this.props.auth
 
     return(
+      <div>
       <Menu color='teal' fluid>
         <Menu.Menu position='left'>
           <Menu.Item name='Mulai Belajar'></Menu.Item>
@@ -43,12 +44,20 @@ export default class App extends Component {
           {
             isAuthenticated() && (
               <Menu.Item>
+                <Button onClick={this.goTo.bind(this, 'ping')} primary>Ping</Button>
+              </Menu.Item>
+            )
+          }
+          {
+            isAuthenticated() && (
+              <Menu.Item>
                 <Button onClick={this.logout.bind(this)} negative>Logout</Button>
               </Menu.Item>
             )
           }
         </Menu.Menu>
       </Menu>
+      </div>
     )
   }
 }
