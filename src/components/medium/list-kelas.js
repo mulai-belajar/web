@@ -8,11 +8,14 @@ const ItemExampleDivided = () => (
     <Item className="box-list">
       <Grid.Column width={3}>
               <Image src='./img/ngaji.jpg' />
+              <Item.Meta>Pengajar:</Item.Meta>
+              <Item.Meta>Fikri Muhamad</Item.Meta>
+              <Item.Meta>Lokasi Kelas:</Item.Meta>
+              <Item.Meta>JL Desa Berbunga , Bogor</Item.Meta>
       </Grid.Column>
 
       <Item.Content className="box-list-tulisan">
-      <Item.Header as='a'>Header</Item.Header>
-      <Item.Meta>By:Fikri</Item.Meta>
+      <Item.Header as='a'>Kelas Mengaji</Item.Header>
       <Item.Meta>Mengajar Ngaji Di daerah Pelosok NTB</Item.Meta>
       <Item.Meta>Target Dana</Item.Meta>
       <Item.Meta>
@@ -25,7 +28,7 @@ const ItemExampleDivided = () => (
 
     </Item>
 
-    
+
 
   </Item.Group>
 )

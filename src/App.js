@@ -1,37 +1,38 @@
-import React, {Component} from 'react'
+import 'semantic-ui-css/semantic.min.css';
+import React, { Component } from 'react'
+import { Button, Dropdown, Menu,Grid, Image } from 'semantic-ui-react'
+import './App.css'
+import MenuNav from './components/medium/navigation'
+import MenuProUser from './components/medium/profile-menu-user'
 
-import Navbar from './components/small/navbar'
-//import Iconfeature from './components/small/icon-feature'
-//import Sidebar from './components/medium/sidebar'
-//import Kelaslist from './components/medium/kelaslist'
-import Donationheader from './components/small/donation-header'
-import Donationform from './components/small/donation-form'
-import DonationContent from './components/small/donation-content'
-import Footer from './components/small/footer'
-import {Grid} from 'semantic-ui-react'
-import './App.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom'
 
-export default class App extends Component {
-  render() {
-    return (<Router>
-      <div>
-        <Navbar/>
-        <Grid columns={2}>
-          <Grid.Column>
-            <Donationheader/>
+import HomeUser from './components/large/home'
+import KelasUser from './components/large/kelas-saya'
+import DonasiUser from './components/large/donasi-saya'
+
+const GridExampleVerticallyDivided = () => (
+  <Router>
+    <div>
+      <MenuNav />
+      <div  className="box-user-page">
+      <Grid>
+        <Grid.Row  className="box-noborder">
+          <Grid.Column width={3}>
+            <MenuProUser />
           </Grid.Column>
-          <Grid.Column>
-            <Donationform/>
+          <Grid.Column width={13}>
+            <Route exact path='/' component={HomeUser} />
+            <Route path='/kelas-user' component={KelasUser} />
+            <Route path='/donasi-user' component={DonasiUser} />
           </Grid.Column>
-        </Grid>
-        <Grid columns={2}>
-          <Grid.Column>
-            <DonationContent/>
-          </Grid.Column>
-        </Grid>
-        <Footer/>
+        </Grid.Row>
+      </Grid>
       </div>
-    </Router>);
-  }
-}
+    </div>
+  </Router>
+)
+export default GridExampleVerticallyDivided
