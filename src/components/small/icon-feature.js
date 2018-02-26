@@ -7,19 +7,15 @@ const Iconfeature = () => (
     <Grid.Row className='Featured' columns={4}>
       <Grid.Column>
         <Image src='/images/care.png' />
-        <p>Kemudahan berbagi</p>
       </Grid.Column>
       <Grid.Column>
-        <Image src='/img/003-money.png' />
-        <p>Sistem transparan</p>
+        <Image src='/images/care.png' />
       </Grid.Column>
       <Grid.Column>
-        <Image src='/img/002-payment-method.png' />
-        <p>Transaksi aman</p>
+        <Image src='/images/care.png' />
       </Grid.Column>
       <Grid.Column>
-        <Image src='/img/001-teamwork.png' />
-        <p>Kontribusi untuk negeri</p>
+        <Image src='/images/care.png' />
       </Grid.Column>
     </Grid.Row>
 
