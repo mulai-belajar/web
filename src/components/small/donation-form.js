@@ -29,7 +29,7 @@ class DonationForm extends Component {
           <Progress percent={this.state.percent} indicating />
          </div>
          <div className="donation-button">
-           <Button color='green' onClick={this.show('tiny')}>Donasi</Button>
+           <Button inverted color='green' onClick={this.show('tiny')}>Donasi Sekarang</Button>
           <Modal className='donation-modal' size={size} open={open} onClose={this.close}>
              <Modal.Header>
                Masukkan Nominal
@@ -44,7 +44,7 @@ class DonationForm extends Component {
              </div>
             <Form>
              <Form.Field>
-              <CurrencyInput className='' decimalSeparator="," thousandSeparator="." prefix="Rp"/>
+              <CurrencyInput className='form-control' precision="0" thousandSeparator="." prefix="Rp"/>
              </Form.Field>
             </Form>
             </Modal.Content>
