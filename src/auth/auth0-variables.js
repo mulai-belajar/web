@@ -1,6 +1,6 @@
 export const AUTH_CONFIG = {
   domain: 'mulaibelajar.auth0.com',
-  clientId: 'xoJo7VIvqjm4lTRa0ptT5wCnz1o3i9CC',
+  clientId: 'Fk8GynHevgwu6sa1CFD4WDOgsuv6Veno',
   callbackUrl: 'http://localhost:3000/callback',
   audience: 'http://api.mulaibelajar.com'
 }

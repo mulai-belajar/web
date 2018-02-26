@@ -9,7 +9,7 @@ export default class Auth {
     redirectUri: AUTH_CONFIG.callbackUrl,
     audience: AUTH_CONFIG.audience,
     responseType: 'token id_token',
-    scope: 'openid profile read:category'
+    scope: 'openid profile read:messages'
   });
 
   userProfile

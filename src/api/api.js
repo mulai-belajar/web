@@ -5,8 +5,7 @@ import axios from 'axios'
 export default class Api extends Component {
   componentWillMount() {
     this.setState({
-      message: ' ',
-      category: []
+      message: ' '
     })
   }
   ping() {
@@ -15,21 +14,15 @@ export default class Api extends Component {
       .catch(error => this.setState({ message: error.message }))
   }
   securedPing() {
-    const { getAccessToken } = this.props.auth
-    const header = { 'Authorization': `Bearer ${getAccessToken()}`}
-    axios({
-      method : 'get',
-      url : 'http://localhost:3333/api/class',
-      headers : {
-        header
-      }
-    })
-      .then(response => this.setState({ category: response.data.data }))
-      .catch(error => this.setState({ message: error.message }))
+    const { getAccessToken } = this.props.auth;
+    const headers = { 'Authorization': `Bearer ${getAccessToken()}`}
+    axios.get(`http://localhost:3333/private-scopes`, { headers })
+      .then(response => this.setState({ message: response.data.message }))
+      .catch(error => this.setState({ message: error.message }));
   }
   render() {
     const { isAuthenticated } = this.props.auth;
-    const { message, category } = this.state;
+    const { message } = this.state;
     return (
       <div>
         <h1>Make a Call to the Server</h1>
@@ -45,9 +38,6 @@ export default class Api extends Component {
             )
          }
          <h2>{message}</h2>
-         { category.map(category =>
-            <h2>{category.name}</h2>
-         )}
        </div>
     );
   }
