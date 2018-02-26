@@ -1,8 +1,9 @@
 import React from 'react'
 import { Header, Table, Button } from 'semantic-ui-react'
+import '../../App.css'
 
 const TableExamplePadded = () => (
-  <Table celled padded>
+  <Table celled padded className="table-box">
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Nama Kelas</Table.HeaderCell>

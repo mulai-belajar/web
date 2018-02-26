@@ -14,10 +14,10 @@ export default class MenuExampleSizeLarge extends Component {
     return (
       <Menu  className="navigasiright">
         <Menu.Menu position='right'>
-          <Menu.Item className='menu'>
+          <Menu.Item className='borderless'>
              List Daftar Kelas
           </Menu.Item>
-          <Menu.Item>
+          <Menu.Item  className="borderless">
              <Button color='teal'>Buat Kelas</Button>
           </Menu.Item>
           <Dropdown className='dropmenu' item text='fikri'>
