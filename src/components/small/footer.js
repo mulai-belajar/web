@@ -3,7 +3,7 @@ import { Image, Grid, List } from 'semantic-ui-react'
 export default class Footer extends Component {
   render() {
     return (
-      <div className="ui inverted teal vertical footer segment">
+      <div className="footer">
       <Grid columns={3}>
         <Grid.Column>
           <a href="www.mulaibelajar.com" title='Mulaibelajar.com' rel="noopener noreferrer" target="_blank">
