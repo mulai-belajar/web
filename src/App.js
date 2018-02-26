@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
-import Navbar from './components/small/navbar'
 import Iconfeature from './components/small/icon-feature'
 import Sidebar from './components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
+import Headerhomepage from './components/medium/header-homepage'
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom"
+
+import Kelaslist from './components/medium/kelaslist'
 
 class App extends Component {
     render() {
      return (
        <div className="App">
-         <header className="App-header">
-
-         </header>
-         <p className="App-intro">
-         </p>
-
-
+         <Headerhomepage/>
        <Grid columns={1}>
-         <Grid.Column>
-         <Navbar/>
-         </Grid.Column>
-
 
      <Grid.Row columns={1}>
        <Grid.Column>
@@ -35,7 +27,7 @@ class App extends Component {
        </Grid.Column>
 
        <Grid.Column>
-         <Sidebar/>
+         <Kelaslist/>
        </Grid.Column>
      </Grid.Row>
    </Grid>

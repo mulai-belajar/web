@@ -90,6 +90,8 @@ body {}
 
 .Featured {
   margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 @keyframes App-logo-spin {
