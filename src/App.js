@@ -1,12 +1,5 @@
-import React, { Component } from 'react';
-import Iconfeature from './components/small/icon-feature'
-import Sidebar from './components/medium/sidebar'
-import {Grid} from 'semantic-ui-react'
-import Footer from './components/small/footer'
-import './App.css';
-
-
-import Kelaslist from './components/medium/kelaslist'
+import React, { Component } from 'react'
+import './App.css'
 
 import Homepage from './pages/homepage'
 

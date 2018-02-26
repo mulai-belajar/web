@@ -140,13 +140,24 @@ body {}
   margin-bottom: 5px;
 }
 
-.class-name, .class-category {
+.class-name, .class-category, .name {
   justify-content: left !important;
   align-items: left !important;
   align-content: left !important;
   text-align: left !important;
-  margin-top: 0px;
+  margin-top: 0px !important;
   margin-bottom: 0px;
+  margin-left: 15px;
+}
+
+.name {
+  justify-content: left !important;
+  align-items: left !important;
+  align-content: left !important;
+  text-align: left !important;
+  margin-top: 8px !important;
+  margin-bottom: 0px;
+  margin-left: 15px;
 }
 
 .class-teacher {
@@ -167,9 +178,10 @@ body {}
   margin-bottom: 0px;
 }
 
-.collected, .collect-amount {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.indicator {
+  margin-top: 10px !important;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .collected, .collect-amount {
@@ -177,6 +189,9 @@ body {}
   align-items: left !important;
   align-content: left !important;
   text-align: left !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-left: 15px;
 }
 
 .day, .day-left {
@@ -184,8 +199,9 @@ body {}
   align-items: right !important;
   align-content: right !important;
   text-align: right !important;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-right: 15px;
 }
 
 .donation-button {
