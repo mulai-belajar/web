@@ -90,8 +90,6 @@ body {}
 
 .Featured {
   margin-left: 120px;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 @keyframes App-logo-spin {
@@ -164,8 +162,4 @@ body {}
   padding-left: 150px !important;
   padding-top: 25px;
   padding-bottom: 45px;
-}
-
-.footer {
-  background-color: #008884;
 }
