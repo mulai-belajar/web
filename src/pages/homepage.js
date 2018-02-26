@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Navbar from './components/small/navbar'
-import Iconfeature from './components/small/icon-feature'
-import Sidebar from './components/medium/sidebar'
+import Navbar from '../components/small/navbar'
+import Iconfeature from '../components/small/icon-feature'
+import Sidebar from '../components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
-import './App.css';
+import '../App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 
 class App extends Component {
