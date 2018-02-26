@@ -10,19 +10,19 @@ export default class Kelaslist extends Component {
         <Grid.Column>
           <Card>
             <Image src={KELAS.image}/>
-            <Card.Header textAlign='center'>
+            <Card.Header>
               {KELAS.class}
             </Card.Header>
-            <Card.Meta textAlign='center'>
+            <Card.Meta>
               {KELAS.category}
             </Card.Meta>
-            <Card.Content textAlign='center'>
+            <Card.Content>
               {KELAS.name}
             </Card.Content>
-            <Card.Content extra textAlign='center'>
+            <Card.Content>
               {KELAS.donation}
             </Card.Content>
-            <Card.Content extra textAlign='center'>
+            <Card.Content>
               {KELAS.time}
             </Card.Content>
           </Card>
