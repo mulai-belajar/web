@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import Navbar from './components/small/navbar'
-import Iconfeature from './components/small/icon-feature'
-import Sidebar from './components/medium/sidebar'
+import Iconfeature from '../components/small/icon-feature'
+import Sidebar from '../components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
-import './App.css';
+import Headerhomepage from '../components/medium/header-homepage'
+import Footer from '../components/small/footer'
+import '../App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 
-class App extends Component {
+import Kelaslist from '../components/medium/kelaslist'
+
+class Homepage extends Component {
     render() {
      return (
        <div className="App">
@@ -45,4 +48,4 @@ class App extends Component {
     }
   }
 
-export default App
+export default Homepage
