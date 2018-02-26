@@ -15,7 +15,6 @@ export default class MenuExampleLinkItem extends Component {
           <Link to='/'><Menu.Item href=''>Beranda</Menu.Item></Link>
           <Link to='/kelas-user'><Menu.Item>Kelas Saya</Menu.Item></Link>
         <Link to='/donasi-user'><Menu.Item>Donasi Saya</Menu.Item></Link>
-      <Link to='/user'><Menu.Item>Akun saya</Menu.Item></Link>
     <Link to='/'><Menu.Item>Keluar</Menu.Item></Link>
         </Menu>
 

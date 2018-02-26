@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import {Button, Segment, Menu, Image} from 'semantic-ui-react'
-import {Link} from "react-router-dom"
+import {Button, Menu, Image} from 'semantic-ui-react'
 
 export default class Navbar extends Component {
   render() {

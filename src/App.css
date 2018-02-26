@@ -86,7 +86,7 @@ body {}
 
 .box-list {
   height: auto !important;
-  width: 80% !important;
+  width: 92% !important;
   padding: 40px !important;
   border: 1px solid grey !important;
   border-radius: 5px !important;
@@ -212,6 +212,16 @@ body {}
   align-items: center !important;
   align-content: center !important;
   text-align: center !important;
+}
+
+.table-box {
+  width: 92% !important;
+  font-size: 12px !important;
+}
+
+.borderless {
+  border-style: none !important;
+  color: #fff !important;
 }
 
 .donation-content {

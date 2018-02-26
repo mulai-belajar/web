@@ -1,32 +1,25 @@
+import 'semantic-ui-css/semantic.min.css';
 import React, { Component } from 'react'
-import { Grid } from 'semantic-ui-react'
-
 import './App.css'
+import Homepage from './pages/homepage'
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 
-import Navbar from './components/small/navbar'
-import Sidebar from './components/medium/sidebar'
-import Boxclasslist from './components/medium/box-class-list'
-import Footer from './components/small/footer'
+class App extends Component {
+    render() {
+     return (
+       <Router>
+         <div className="App">
+             <div>
+               <Route exact path="/" component={Homepage}/>
+             </div>
+         </div>
+       </Router>
 
-import { BrowserRouter as Router } from 'react-router-dom'
-
-export default class App extends Component {
-  render() {
-    return(
-  <Router>
-      <div>
-        <Navbar/>
-        <Grid columns={2}>
-          <Grid.Column width={5}>
-            <Sidebar/>
-          </Grid.Column>
-          <Grid.Column>
-            <Boxclasslist/>
-          </Grid.Column>
-        </Grid>
-        <Footer/>
-      </div>
-    </Router>
-   )
+      );
+    }
   }
-}
+
+export default App
