@@ -1,23 +1,27 @@
-
 import 'semantic-ui-css/semantic.min.css';
 import React, { Component } from 'react'
-import { Button, Dropdown, Menu,Grid, Image } from 'semantic-ui-react'
 import './App.css'
-
+import Homepage from './pages/homepage'
 
 import {
   BrowserRouter as Router,
-  Route,
+  Route
 } from 'react-router-dom'
 
-import Homepage from './pages/homepage'
+class App extends Component {
+    render() {
+     return (
+       <Router>
+         <div className="App">
+             <div>
+               <Route exact path="/" component={Homepage}/>
+             </div>
+         </div>
+       </Router>
 
-const GridExampleVerticallyDivided = () => (
-  <Router>
-    <div className="App">
-            <Route exact path='/' component={Homepage} />
+      );
+    }
+  }
 
-    </div>
-  </Router>
-)
-export default GridExampleVerticallyDivided
+export default App
+
