@@ -35,5 +35,4 @@ const GridExampleVerticallyDivided = () => (
     </div>
   </Router>
 )
-
 export default GridExampleVerticallyDivided
