@@ -2,7 +2,7 @@ import 'semantic-ui-css/semantic.min.css';
 import React, { Component } from 'react'
 import { Button, Dropdown, Menu,Grid, Image } from 'semantic-ui-react'
 import './App.css'
-import MenuNav from './components/medium/navigation'
+import MenuNav from './components/medium/header-user'
 import MenuProUser from './components/medium/profile-menu-user'
 
 import {
