@@ -29,6 +29,10 @@ body {}
   height: 160px !important;
 }
 
+.menu {
+  color: #fff !important;
+}
+
 .dropmenu {
   color: #fff !important;
   height: 36px;
