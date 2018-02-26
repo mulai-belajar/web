@@ -14,17 +14,23 @@ body {}
   border-left: none !important;
 }
 
-.footer-menu {
-  justify-content: right;
-  align-items: right;
-  align-content: right;
-  text-align: right;
-  padding-top: 20px;
-  padding-left: 250px !important;
+.container {
+  margin-bottom: 38px;
 }
 
-.h5 {
-  margin-bottom: 30px;
+.container-logo {
+  margin-top: 140px !important;
+}
+
+.footer-menu {
+  padding-right: 10px !important;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .aligned {
@@ -44,6 +50,13 @@ body {}
   margin: 10px 10px;
 }
 
+.footer-logo {
+  height: 60px;
+  display: flex;
+  margin: 20px 20px;
+  margin-top: 30px;
+}
+
 .App-header {
   background-color: #008884;
   height: 120px;
@@ -57,10 +70,6 @@ body {}
   border-radius: 100px !important;
   width: 210px !important;
   height: 160px !important;
-}
-
-.menu {
-  color: #fff !important;
 }
 
 .dropmenu {
@@ -77,7 +86,7 @@ body {}
 
 .box-list {
   height: auto !important;
-  width: 80% !important;
+  width: 92% !important;
   padding: 40px !important;
   border: 1px solid grey !important;
   border-radius: 5px !important;
@@ -90,8 +99,6 @@ body {}
 
 .Featured {
   margin-left: 120px;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 @keyframes App-logo-spin {
@@ -124,13 +131,61 @@ body {}
   border: none !important;
 }
 
-.amount, .amount-target, .amount-now {
+.amount, .amount-now, .amount-target {
   justify-content: left !important;
   align-items: left !important;
   align-content: left !important;
   text-align: left !important;
   margin-top: 0px;
   margin-bottom: 5px;
+}
+
+.class-name, .class-category {
+  justify-content: left !important;
+  align-items: left !important;
+  align-content: left !important;
+  text-align: left !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.class-teacher {
+  justify-content: left !important;
+  align-items: left !important;
+  align-content: left !important;
+  text-align: left !important;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.teacher-name {
+  justify-content: left !important;
+  align-items: left !important;
+  align-content: left !important;
+  text-align: left !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.collected, .collect-amount {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.collected, .collect-amount {
+  justify-content: left !important;
+  align-items: left !important;
+  align-content: left !important;
+  text-align: left !important;
+}
+
+.day, .day-left {
+  justify-content: right !important;
+  align-items: right !important;
+  align-content: right !important;
+  text-align: right !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .donation-button {
@@ -159,13 +214,19 @@ body {}
   text-align: center !important;
 }
 
+.table-box {
+  width: 92% !important;
+  font-size: 12px !important;
+}
+
+.borderless {
+  border-style: none !important;
+  color: #fff !important;
+}
+
 .donation-content {
   text-align: justify;
   padding-left: 150px !important;
   padding-top: 25px;
   padding-bottom: 45px;
-}
-
-.footer {
-  background-color: #008884;
 }
