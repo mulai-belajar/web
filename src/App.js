@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Iconfeature from './components/small/icon-feature'
 import Sidebar from './components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
-import Headerhomepage from './components/medium/header-homepage'
+
 import Footer from './components/small/footer'
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom"
@@ -18,6 +18,7 @@ class App extends Component {
          <div className="App">
              <div>
                <Route exact path="/" component={Homepage}/>
+
              </div>
          </div>
        </Router>
