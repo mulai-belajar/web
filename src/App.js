@@ -1,14 +1,8 @@
-import React, { Component } from 'react';
-import Iconfeature from './components/small/icon-feature'
-import Sidebar from './components/medium/sidebar'
-import {Grid} from 'semantic-ui-react'
-import Headerhomepage from './components/medium/header-homepage'
-import Footer from './components/small/footer'
-import './App.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 
-import Kelaslist from './components/medium/kelaslist'
-
+import 'semantic-ui-css/semantic.min.css';
+import React, { Component } from 'react'
+import { Button, Dropdown, Menu,Grid, Image } from 'semantic-ui-react'
+import './App.css'
 import Homepage from './pages/homepage'
 
 class App extends Component {

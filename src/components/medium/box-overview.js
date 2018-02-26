@@ -21,7 +21,7 @@ const CardExampleGroups = () => (
           Jumlah Donasi
         </Card.Header>
         <Card.Description>
-          <h2>Rp 200,000</h2>
+          <h2>Rp 700,000</h2>
         </Card.Description>
       </Card.Content>
     </Card>

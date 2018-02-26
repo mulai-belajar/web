@@ -59,10 +59,6 @@ body {}
   height: 160px !important;
 }
 
-.menu {
-  color: #fff !important;
-}
-
 .dropmenu {
   color: #fff !important;
   height: 36px;
@@ -77,7 +73,7 @@ body {}
 
 .box-list {
   height: auto !important;
-  width: 80% !important;
+  width: 92% !important;
   padding: 40px !important;
   border: 1px solid grey !important;
   border-radius: 5px !important;
@@ -90,8 +86,6 @@ body {}
 
 .Featured {
   margin-left: 120px;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 @keyframes App-logo-spin {
@@ -159,13 +153,19 @@ body {}
   text-align: center !important;
 }
 
+.table-box {
+  width: 92% !important;
+  font-size: 12px !important;
+}
+
+.borderless {
+  border-style: none !important;
+  color: #fff !important;
+}
+
 .donation-content {
   text-align: justify;
   padding-left: 150px !important;
   padding-top: 25px;
   padding-bottom: 45px;
-}
-
-.footer {
-  background-color: #008884;
 }

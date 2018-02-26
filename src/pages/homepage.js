@@ -13,8 +13,18 @@ class Homepage extends Component {
     render() {
      return (
        <div className="App">
-         <Headerhomepage/>
+         <header className="App-header">
+
+         </header>
+         <p className="App-intro">
+         </p>
+
+
        <Grid columns={1}>
+         <Grid.Column>
+         <Navbar/>
+         </Grid.Column>
+
 
      <Grid.Row columns={1}>
        <Grid.Column>
@@ -23,16 +33,15 @@ class Homepage extends Component {
      </Grid.Row>
 
      <Grid.Row columns={2}>
-       <Grid.Column width={4}>
+       <Grid.Column>
          <Sidebar/>
        </Grid.Column>
 
-       <Grid.Column width={10}>
-         <Kelaslist/>
+       <Grid.Column>
+         <Sidebar/>
        </Grid.Column>
      </Grid.Row>
    </Grid>
-   <Footer/>
 </div>
 
       );
