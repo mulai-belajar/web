@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Navbar from './components/small/navbar'
 import Iconfeature from './components/small/icon-feature'
 import Sidebar from './components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
-import GridExamplePadded from './components/medium/header-user.js'
+import Headerhomepage from './components/medium/header-homepage'
+import Footer from './components/small/footer'
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 
@@ -13,7 +13,7 @@ class App extends Component {
     render() {
      return (
        <div className="App">
-         <GridExamplePadded/>
+         <Headerhomepage/>
        <Grid columns={1}>
 
      <Grid.Row columns={1}>
@@ -23,15 +23,16 @@ class App extends Component {
      </Grid.Row>
 
      <Grid.Row columns={2}>
-       <Grid.Column>
+       <Grid.Column width={4}>
          <Sidebar/>
        </Grid.Column>
 
-       <Grid.Column>
+       <Grid.Column width={10}>
          <Kelaslist/>
        </Grid.Column>
      </Grid.Row>
    </Grid>
+   <Footer/>
 </div>
 
       );
