@@ -157,6 +157,10 @@ body {}
   text-align: center !important;
 }
 
+.table-box {
+  width: 92% !important;
+}
+
 .donation-content {
   text-align: justify;
   padding-left: 150px !important;
