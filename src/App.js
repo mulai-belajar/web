@@ -10,9 +10,9 @@ import {
   Route,
 } from 'react-router-dom'
 
-import HomeUser from './components/large/home'
-import KelasUser from './components/large/kelas-saya'
-import DonasiUser from './components/large/donasi-saya'
+import HomeUser from './pages/home'
+import KelasUser from './pages/kelas-saya'
+import DonasiUser from './pages/donasi-saya'
 
 const GridExampleVerticallyDivided = () => (
   <Router>
