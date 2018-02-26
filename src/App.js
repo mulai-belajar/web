@@ -2,6 +2,7 @@ import 'semantic-ui-css/semantic.min.css';
 import React, { Component } from 'react'
 import './App.css'
 import Homepage from './pages/homepage'
+
 import {
   BrowserRouter as Router,
   Route
@@ -23,3 +24,4 @@ class App extends Component {
   }
 
 export default App
+
