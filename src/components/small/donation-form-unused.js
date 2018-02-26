@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Button, Card, Segment, Sticky } from 'semantic-ui-react'
+import { Form, Button, Card, Sticky } from 'semantic-ui-react'
 
 export default class DonationForm2 extends Component {
   state = {}
@@ -11,7 +11,7 @@ export default class DonationForm2 extends Component {
 
     return (
       <div className='donation-form' ref={this.handleContextRef}>
-          <Sticky context={contextRef}>
+       <Sticky context={contextRef}>
        <Card.Group>
           <Card textAlign='center'>
             <Card.Content>
@@ -31,8 +31,8 @@ export default class DonationForm2 extends Component {
             </Card.Content>
           </Card>
        </Card.Group>
-          </Sticky>
-        </div >
+       </Sticky>
+      </div >
     )
   }
 }

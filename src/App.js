@@ -1,38 +1,32 @@
-import 'semantic-ui-css/semantic.min.css';
 import React, { Component } from 'react'
-import { Button, Dropdown, Menu,Grid, Image } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
+
 import './App.css'
-import MenuNav from './components/medium/navigation'
-import MenuProUser from './components/medium/profile-menu-user'
 
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom'
+import Navbar from './components/small/navbar'
+import Sidebar from './components/medium/sidebar'
+import Boxclasslist from './components/medium/box-class-list'
+import Footer from './components/small/footer'
 
-import HomeUser from './components/large/home'
-import KelasUser from './components/large/kelas-saya'
-import DonasiUser from './components/large/donasi-saya'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-const GridExampleVerticallyDivided = () => (
+export default class App extends Component {
+  render() {
+    return(
   <Router>
-    <div>
-      <MenuNav />
-      <div  className="box-user-page">
-      <Grid>
-        <Grid.Row  className="box-noborder">
-          <Grid.Column width={3}>
-            <MenuProUser />
+      <div>
+        <Navbar/>
+        <Grid columns={2}>
+          <Grid.Column width={5}>
+            <Sidebar/>
           </Grid.Column>
-          <Grid.Column width={13}>
-            <Route exact path='/' component={HomeUser} />
-            <Route path='/kelas-user' component={KelasUser} />
-            <Route path='/donasi-user' component={DonasiUser} />
+          <Grid.Column>
+            <Boxclasslist/>
           </Grid.Column>
-        </Grid.Row>
-      </Grid>
+        </Grid>
+        <Footer/>
       </div>
-    </div>
-  </Router>
-)
-export default GridExampleVerticallyDivided
+    </Router>
+   )
+  }
+}
