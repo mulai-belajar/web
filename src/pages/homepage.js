@@ -4,12 +4,7 @@ import Sidebar from '../components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
 import Footer from '../components/small/footer'
 import '../App.css';
-<<<<<<< HEAD
-
-
-=======
 import Navbar from '../components/small/navbar'
->>>>>>> b0733e3221ff1e4e4ba288f3268b327c24585def
 import Kelaslist from '../components/medium/kelaslist'
 
 class Homepage extends Component {

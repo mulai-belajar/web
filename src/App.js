@@ -4,7 +4,7 @@ import Sidebar from './components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
 import Footer from './components/small/footer'
 import './App.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom"
+
 
 import Kelaslist from './components/medium/kelaslist'
 
@@ -32,4 +32,3 @@ class App extends Component {
   }
 
 export default App
-
