@@ -14,6 +14,23 @@ body {}
   border-left: none !important;
 }
 
+.footer-menu {
+  justify-content: right;
+  align-items: right;
+  align-content: right;
+  text-align: right;
+  padding-top: 20px;
+  padding-left: 250px !important;
+}
+
+.h5 {
+  margin-bottom: 30px;
+}
+
+.aligned {
+  padding-top: 25px;
+}
+
 .box-user {
   width: 210px !important;
   height: auto;
@@ -103,4 +120,46 @@ body {}
 
 .box-noborder {
   border: none !important;
+}
+
+.amount, .amount-target, .amount-now {
+  justify-content: left !important;
+  align-items: left !important;
+  align-content: left !important;
+  text-align: left !important;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.donation-button {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.donation-header {
+  padding-left: 150px !important;
+  padding-top: 30px;
+}
+
+.donation-form {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding-left: 150px !important;
+  padding-top: 30px;
+}
+
+.donation-modal {
+  justify-content: center !important;
+  align-items: center !important;
+  align-content: center !important;
+  text-align: center !important;
+}
+
+.donation-content {
+  text-align: justify;
+  padding-left: 150px !important;
+  padding-top: 25px;
+  padding-bottom: 45px;
 }
