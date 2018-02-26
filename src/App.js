@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 import Kelaslist from './components/medium/kelaslist'
 
 import Homepage from './pages/homepage'
+
 import {
   BrowserRouter as Router,
   Route
@@ -31,3 +32,4 @@ class App extends Component {
   }
 
 export default App
+
