@@ -22,15 +22,15 @@ body {}
   margin-top: 140px !important;
 }
 
-.footer-menu {
+.footer-menu a {
   padding-right: 10px !important;
+  color: white !important;
 }
 
 .footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  margin-top: 15px;
+  background-color: #008884;
+  color: white;
 }
 
 .aligned {
@@ -54,7 +54,7 @@ body {}
   height: 60px;
   display: flex;
   margin: 20px 20px;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .App-header {
