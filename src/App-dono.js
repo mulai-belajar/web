@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Grid} from 'semantic-ui-react'
 
 import Navbar from './components/small/navbar'
-import FAQ from './components/medium/faq'
+import Contact from './components/medium/contact'
 import Footer from './components/small/footer'
 
 import './App.css'
@@ -18,7 +18,7 @@ class Homepage extends Component {
          </Grid.Column>
         <Grid.Row columns={1}>
          <Grid.Column>
-           <FAQ/>
+           <Contact/>
          </Grid.Column>
         </Grid.Row>
         <Grid.Row>
