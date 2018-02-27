@@ -272,3 +272,13 @@ p {
 .segment-about {
   margin: 50px 100px;
 }
+
+.how-to-donate {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.about-logo {
+  margin-right: 10px;
+}
