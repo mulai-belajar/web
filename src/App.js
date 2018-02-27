@@ -28,10 +28,10 @@ export default class Navbar extends Component {
                 <Button onClick={this.goTo.bind(this, 'home')} primary>Beranda</Button>
               </Menu.Item>
               <Menu.Item>
-                <Button primary>Tentang</Button>
+                <Button onClick={this.goTo.bind(this, 'tentang')} primary>Tentang</Button>
               </Menu.Item>
               <Menu.Item>
-                <Button primary>Kontak</Button>
+                <Button onClick={this.goTo.bind(this, 'kontak')} primary>Kontak</Button>
               </Menu.Item>
           {
             !isAuthenticated() && (
