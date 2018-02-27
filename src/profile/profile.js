@@ -30,6 +30,7 @@ export default class Profile extends Component {
               </Card.Meta>
               <Card.Description>
                 {profile.updated_at}
+                {JSON.stringify(profile, null, 2)}
               </Card.Description>
             </Card.Content>
           </Card>

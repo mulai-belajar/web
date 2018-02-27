@@ -9,7 +9,7 @@ export default class Auth {
     redirectUri: AUTH_CONFIG.callbackUrl,
     audience: AUTH_CONFIG.audience,
     responseType: 'token id_token',
-    scope: 'openid profile read:messages'
+    scope: 'openid profile email read:messages'
   });
 
   userProfile
@@ -71,6 +71,7 @@ export default class Auth {
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
         this.userProfile = profile
+        console.log(profile);
       }
       cb(err, profile)
     });
