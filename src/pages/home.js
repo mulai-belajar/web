@@ -10,11 +10,16 @@ import FormOrderKelas from '../components/medium/form-buat-kelas'
 import Table from '../components/medium/table-donasi'
 
 const HomeUser = () => (
-<div>
-                <BoxOverview />
-                <ListKelas />
-                <Table />
-              </div>
+  <Grid centered columns={1} padded>
+    <Grid.Column width={3}>
+      <MenuProUser />
+    </Grid.Column>
+    <Grid.Column width={13}>
+      <BoxOverview />
+      <ListKelas />
+      <Table />
+    </Grid.Column>
+  </Grid>
 )
 
 export default HomeUser

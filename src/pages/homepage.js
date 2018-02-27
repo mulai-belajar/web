@@ -4,16 +4,14 @@ import Sidebar from '../components/medium/sidebar'
 import {Grid} from 'semantic-ui-react'
 import Footer from '../components/small/footer'
 import '../App.css';
-import Navbar from '../components/small/navbar'
 import Kelaslist from '../components/medium/kelaslist'
 
 class Homepage extends Component {
-    render() {
+      render() {
      return (
        <div className="App">
        <Grid columns={1}>
          <Grid.Column>
-         <Navbar/>
          </Grid.Column>
      <Grid.Row columns={1}>
        <Grid.Column>

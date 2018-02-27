@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Icon, Image as ImageComponent, Item, Label,Progress,Grid,Image} from 'semantic-ui-react'
+import { Button, Item,Progress,Grid,Image} from 'semantic-ui-react'
 import '../../App.css'
 
 

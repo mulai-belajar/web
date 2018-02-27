@@ -1,11 +1,12 @@
 import React from 'react'
 import { Redirect, Route, Router } from 'react-router-dom'
-import Navbar from '../components/large/navbar'
+import App from '../App'
 import Callback from '../callback/callback'
 import Auth from '../auth/auth'
 import history from '../auth/history'
-import User from '../pages/home'
-import Homepage from '../pages/homepage'
+import Profile from '../pages/profile'
+import Home from '../pages/homepage'
+import Kelas from '../components/medium/form-buat-kelas'
 
 const auth = new Auth()
 
@@ -19,13 +20,20 @@ export const makeMainRoutes = () => {
   return (
       <Router history={history}>
         <div>
-          <Navbar />
-          <Route path="/" render={(props) => <Homepage auth={auth} {...props} />} />
+          <Route path="/" render={(props) => <App auth={auth} {...props} />} />
+          <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
           <Route path="/profile" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/"/>
             ) : (
-              <User auth={auth} {...props} />
+              <Profile auth={auth} {...props} />
+            )
+          )} />
+        <Route path="/buat-kelas" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/"/>
+            ) : (
+              <Kelas auth={auth} {...props} />
             )
           )} />
           <Route path="/callback" render={(props) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Table, Button } from 'semantic-ui-react'
+import { Table, Button } from 'semantic-ui-react'
 import '../../App.css'
 
 const TableExamplePadded = () => (
