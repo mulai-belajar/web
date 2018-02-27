@@ -261,3 +261,14 @@ p {
   border-style: none !important;
   color: #fff !important;
 }
+
+.donation-content {
+  text-align: justify;
+  padding-left: 150px !important;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
+.segment-about {
+  margin: 50px 100px;
+}
