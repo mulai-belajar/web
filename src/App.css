@@ -246,3 +246,7 @@ body {}
   padding-top: 25px;
   padding-bottom: 45px;
 }
+
+.segment-about {
+  margin: 50px 100px;
+}
