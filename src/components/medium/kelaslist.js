@@ -2,6 +2,10 @@ import React,{Component}  from "react"
 import { Grid, Card, Progress, Button, Icon, Modal, Header } from 'semantic-ui-react'
 import axios from 'axios'
 import '../../App.css'
+import Donation from './donasi.js'
+import Auth from '../../auth/auth'
+
+const auth = new Auth()
 
 export default class Kelaslist extends Component {
   componentWillMount() {
@@ -17,11 +21,13 @@ export default class Kelaslist extends Component {
       .catch(error => this.setState({ message: error.message }))
   }
 
-  show = size => () => this.setState({ size, open: true })
-
   increment = () => this.setState({
     percent: this.state.classes.now_donation >= 100 ? 0 : this.state.classes.total_donation + 10,
   })
+
+  login() {
+    auth.login()
+  }
 
   render() {
     const { classes } = this.state
@@ -81,10 +87,19 @@ export default class Kelaslist extends Component {
               </Grid>
            </Card.Content>
            <Card.Content extra>
-             <Button icon labelPosition='right' fluid positive>
-               Donasi
-               <Icon name='right arrow' />
-             </Button>
+             {
+               auth.isAuthenticated() && (
+                 <Donation />
+               )
+             }
+             {
+               !auth.isAuthenticated() && (
+                 <Button onClick={this.login.bind(this)} icon labelPosition='right' fluid positive>
+                     Donasi
+                   <Icon name='right arrow' />
+                 </Button>
+               )
+             }
            </Card.Content>
           </Card>
         </Grid.Column>
