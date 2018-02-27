@@ -1,5 +1,9 @@
 body {}
 
+p {
+  text-align: justify;
+}
+
 .navigasi {
   background-color: #008884;
   height: auto;
@@ -31,6 +35,9 @@ body {}
   margin-top: 15px;
   background-color: #008884;
   color: white;
+  position: relative;
+  left: 0;
+  bottom: 0;
 }
 
 .aligned {
@@ -77,6 +84,14 @@ body {}
   height: 36px;
   margin-top: 7px !important;
   border-radius: 4px;
+}
+
+.accordion, .accordion-title {
+  margin-left: 157px;
+  margin-bottom: 25px;
+  justify-content: center !important;
+  align-items: center !important;
+  align-content: center !important;
 }
 
 .logo {
@@ -230,6 +245,13 @@ body {}
   text-align: center !important;
 }
 
+.donation-content {
+  text-align: justify;
+  padding-left: 150px !important;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
 .table-box {
   width: 92% !important;
   font-size: 12px !important;
@@ -238,11 +260,4 @@ body {}
 .borderless {
   border-style: none !important;
   color: #fff !important;
-}
-
-.donation-content {
-  text-align: justify;
-  padding-left: 150px !important;
-  padding-top: 25px;
-  padding-bottom: 45px;
 }
