@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 
 import Homepage from './pages/homepage'
-
+import Tentang from './pages/tentang'
 import {
   BrowserRouter as Router,
   Route
@@ -15,6 +15,7 @@ class App extends Component {
          <div className="App">
              <div>
                <Route exact path="/" component={Homepage}/>
+               <Route path="/tentang" component={Tentang}/>
 
              </div>
          </div>
