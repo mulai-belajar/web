@@ -19,7 +19,7 @@ export default class Footer extends Component {
           <List link className='footer-menu'>
             <List.Item as='a' color='white'><a href="https://mulaibelajar.gitbooks.io/preparation/" rel="noopener noreferrer" target="_blank">Tentang</a></List.Item>
             <List.Item as='a'><a href="www.siteyouwishtolinkto.com">FAQ</a></List.Item>
-            <List.Item as='a'><a href="https://mulaibelajar.gitbooks.io/preparation/chapter1.html" rel="noopener noreferrer" target="_blank">Kontak</a></List.Item>
+            <List.Item as='a'><a href="https://mulaibelajar.gitbooks.io/preparation/chapter1.html" rel="noopener noreferrer" target="_blank">Tim</a></List.Item>
           </List>
         </Grid.Column>
       </Grid.Row>
