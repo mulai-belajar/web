@@ -100,27 +100,7 @@ p {
 }
 
 .contact-header {
-  margin-left: 280px
-}
-
-.contact-content {
-  margin-top: 10px;
-  justify-content: left !important;
-  align-items: left !important;
-  align-content: left !important;
-}
-
-.contact-content h3 {
-  margin-bottom: 0px;
-}
-
-.contact-content a {
-  margin-left: 22%;
-}
-
-.box-team {
-  margin: 10px 10px 10px 180px;
-  width: 78% !important;
+  margin-left: 483px;
 }
 
 .box-list {
