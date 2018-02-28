@@ -1,11 +1,8 @@
 import React, {Component} from 'react'
 import {Button, Menu, Image} from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 export default class Navbar extends Component {
-  goTo(route) {
-    this.props.history.replace(`/${route}`)
-  }
-
   login() {
     this.props.auth.login()
   }
@@ -25,16 +22,16 @@ export default class Navbar extends Component {
         </Menu.Menu>
         <Menu.Menu position='right'>
               <Menu.Item>
-                <Button onClick={this.goTo.bind(this, 'home')} primary>Beranda</Button>
+                <Link to='/'><Button primary>Beranda</Button></Link>
               </Menu.Item>
               <Menu.Item>
-                <Button onClick={this.goTo.bind(this, 'tentang')} primary>Tentang</Button>
+                <Link to='/tentang'><Button primary>Tentang</Button></Link>
               </Menu.Item>
               <Menu.Item>
-                <Button onClick={this.goTo.bind(this, 'faq')} primary>FAQ</Button>
+                <Link to='/faq'><Button primary>FAQ</Button></Link>
               </Menu.Item>
               <Menu.Item>
-                <Button onClick={this.goTo.bind(this, 'team')} primary>Team</Button>
+                <Link to='/team'><Button primary>Team</Button></Link>
               </Menu.Item>
           {
             !isAuthenticated() && (
@@ -46,14 +43,14 @@ export default class Navbar extends Component {
           {
             isAuthenticated() && (
               <Menu.Item>
-                <Button onClick={this.goTo.bind(this, 'profile')} primary>Profil</Button>
+                <Link to='/profil'><Button primary>Profil</Button></Link>
               </Menu.Item>
             )
           }
           {
             isAuthenticated() && (
               <Menu.Item>
-                <Button onClick={this.goTo.bind(this, 'buat-kelas')} positive>Buat Kelas</Button>
+                <Link to='/buat-kelas'><Button positive>Buat Kelas</Button></Link>
               </Menu.Item>
             )
           }

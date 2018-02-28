@@ -23,16 +23,16 @@ export const makeMainRoutes = () => {
   return (
       <Router history={history}>
         <div>
-          <Route path="/" render={(props) => <App auth={auth} {...props} />} />
-          <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
-          <Route path="/profile" render={(props) => (
+          <App auth={auth} />
+          <Route exact path="/" component={Home} />
+          <Route path="/profil" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/"/>
             ) : (
               <Profile auth={auth} {...props} />
             )
           )} />
-        <Route path="/buat-kelas" render={(props) => (
+          <Route path="/buat-kelas" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/"/>
             ) : (
@@ -43,9 +43,9 @@ export const makeMainRoutes = () => {
             handleAuthentication(props);
             return <Callback {...props} />
           }}/>
-        <Route path="/faq" render={(props) => <Faq auth={auth} {...props} />} />
-        <Route path="/tentang" render={(props) => <Tentang auth={auth} {...props} />} />
-        <Route path="/team" render={(props) => <Team auth={auth} {...props} />} />
+        <Route path="/faq" component={Faq} />
+        <Route path="/tentang" component={Tentang} />
+        <Route path="/team" component={Team} />
         </div>
       </Router>
   );

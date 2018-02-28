@@ -49,7 +49,7 @@ export default class FormKelas extends Component {
       }
     }
 
-    axios.post('http://api-mulaibelajar.herokuapp.com/api/class', querystring.stringify(data), config)
+    axios.post(`${process.env.REACT_APP_API_URL}/class`, querystring.stringify(data), config)
     console.log(querystring.stringify(data));
   }
 

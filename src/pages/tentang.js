@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../App.css';
 import {Grid, Segment, Image, Step} from 'semantic-ui-react'
 import Footer from '../components/small/footer'
-import Navbar from '../components/small/navbar'
+
 class Tentang extends Component {
   render() {
     return (<div>

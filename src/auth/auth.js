@@ -1,13 +1,12 @@
 import history from './history'
 import auth0 from 'auth0-js'
-import { AUTH_CONFIG } from './auth0-variables'
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
-    domain: AUTH_CONFIG.domain,
-    clientID: AUTH_CONFIG.clientId,
-    redirectUri: AUTH_CONFIG.callbackUrl,
-    audience: AUTH_CONFIG.audience,
+    domain: process.env.REACT_APP_AUTH_DOMAIN,
+    clientID: process.env.REACT_APP_CLIENT_ID,
+    redirectUri: process.env.REACT_APP_CALLBACK_URL,
+    audience: process.env.REACT_APP_AUDIENCE,
     responseType: 'token id_token',
     scope: 'openid profile email read:messages'
   });
@@ -31,9 +30,9 @@ export default class Auth {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult)
-        history.replace('/home')
+        history.replace('/')
       } else if (err) {
-        history.replace('/home')
+        history.replace('/')
         console.log(err)
         alert(`Error: ${err.error}. Check the console for further details.`)
       }
@@ -83,7 +82,7 @@ export default class Auth {
     localStorage.removeItem('id_token')
     localStorage.removeItem('expires_at')
     // navigate to the home route
-    history.replace('/home')
+    history.replace('/')
   }
 
   isAuthenticated() {

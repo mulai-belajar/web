@@ -1,8 +1,6 @@
 import React from "react"
 import Slider from 'react-slick'
 import'../../App.css'
-import {Image,Advertisement,Grid} from 'semantic-ui-react'
-
 
 class Slides extends React.Component{
   render() {

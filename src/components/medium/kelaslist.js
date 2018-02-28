@@ -4,7 +4,6 @@ import axios from 'axios'
 import '../../App.css'
 import Auth from '../../auth/auth'
 import querystring from 'querystring'
-import { Redirect } from 'react-router-dom'
 
 const auth = new Auth()
 
@@ -42,7 +41,7 @@ export default class Kelaslist extends Component {
       }
     }
 
-    axios.post('http://api-mulaibelajar.herokuapp.com/api/donation', querystring.stringify(data), config)
+    axios.post(`${process.env.REACT_APP_API_URL}/donation`, querystring.stringify(data), config)
   }
 
   componentWillMount() {
@@ -53,13 +52,13 @@ export default class Kelaslist extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://api-mulaibelajar.herokuapp.com/api/class`)
+    axios.get(`${process.env.REACT_APP_API_URL}/class`)
       .then(response => this.setState({ classes: response.data.data }))
       .catch(error => this.setState({ message: error.message }))
   }
 
   increment = () => this.setState({
-    percent: this.state.classes.now_donation >= 100 ? 0 : this.state.classes.total_donation + 10,
+    percent: this.state.classes.total_donation >= 100 ? 0 : this.state.classes.now_donation,
   })
 
   login() {
