@@ -1,25 +1,58 @@
 import React, {Component} from 'react'
-import { Form, Input, TextArea, Button, Grid, Image, Card, Header } from 'semantic-ui-react'
-
-const kategori = [
-  { key: 'IT', text: 'IT & SOFTWARE', value: '5a93910ea7b07f3b406f3eb9' },
-  { key: 'SENI', text: 'SENI & DESAIN', value: '5a939129a7b07f3b406f3eba' },
-  { key: 'BAHASA', text: 'BAHASA', value: '5a93912fa7b07f3b406f3ebb' },
-  { key: 'BISNIS', text: 'BISNIS & MARKETING', value: '5a93913aa7b07f3b406f3ebc' },
-  { key: 'AKADEMIK', text: 'AKADEMIK', value: '5a939140a7b07f3b406f3ebd' },
-  { key: 'PENGEMBANGAN', text: 'PENGEMBANGAN DIRI', value: '5a939148a7b07f3b406f3ebe' },
-  { key: 'HOBI', text: 'HOBI & GAYA HIDUP', value: '5a939153a7b07f3b406f3ebf' },
-  { key: 'AGAMA', text: 'AGAMA', value: '5a93915ba7b07f3b406f3ec0' },
-  { key: 'UJIAN', text: 'PERSIAPAN UJIAN', value: '5a939164a7b07f3b406f3ec1' },
-  { key: 'KESEHATAN', text: 'KESEHATAN', value: '5a93916ca7b07f3b406f3ec2' },
-]
-
-const status = [
-  { key: 'Darurat', text: 'Darurat', value: 'Darurat' },
-  { key: 'Tidak Darurat', text: 'Tidak Darurat', value: 'Tidak Darurat' },
-  ]
+import { Form, TextArea, Button, Grid, Image, Card, Header } from 'semantic-ui-react'
+import axios from 'axios'
+import querystring from 'querystring'
 
 export default class FormKelas extends Component {
+  state = {
+    name: '',
+    address: '',
+    description: '',
+    total_donation: '',
+    category: '',
+    status: '',
+    created_by: ''
+  }
+
+  handleChange = event => {
+    this.setState({
+      name: document.getElementById('name').value,
+      address: document.getElementById('address').value,
+      description: document.getElementById('description').value,
+      total_donation: document.getElementById('total_donation').value,
+      category: document.getElementById('category').value,
+      status: document.getElementById('status').value,
+      created_by: document.getElementById('created_by').value,
+    });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const data = {
+      name : this.state.name,
+      address : this.state.address,
+      description : this.state.description,
+      total_donation : this.state.total_donation,
+      category : this.state.category,
+      status : this.state.status,
+      created_by : this.state.created_by
+    }
+
+    const { getAccessToken } = this.props.auth
+
+    const config = {
+      headers: {
+        'Authorization' : `Bearer ${getAccessToken()}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }
+    }
+
+    axios.post('http://api-mulaibelajar.herokuapp.com/api/class', querystring.stringify(data), config)
+    console.log(querystring.stringify(data));
+  }
+
   componentWillMount() {
     this.setState({ profile: {} })
     const { userProfile, getProfile } = this.props.auth
@@ -34,7 +67,7 @@ export default class FormKelas extends Component {
   render(){
     const { profile } = this.state
     return(
-      <Grid centered columns={1} padded>
+      <Grid centered columns={1} padded={true}>
         <Grid.Column width={4}>
           <Card fluid>
             <Image src={profile.picture} fluid />
@@ -50,16 +83,59 @@ export default class FormKelas extends Component {
         </Grid.Column>
         <Grid.Column width={12}>
           <Header size='large'>Buat Kelas Baru</Header>
-          <Form>
-              <Form.Field id='form-input-control-first-name' control={Input} label='Nama Kelas' placeholder='Nama Kelas' />
-              <Form.Select label='Kategori' options={kategori} placeholder='Kategori Kelas' />
-              <Form.Field id='form-textarea-control-opinion' control={TextArea} label='Alamat' placeholder='Alamat' />
-              <Form.Field id='form-input-control-first-name' control={Input} label='Target Donasi ' placeholder='IDR' />
-              <Form.Field id='form-textarea-control-opinion' control={TextArea} label='Deskripsi Kelas' placeholder='Deskripsi Kelas' />
-              <Form.Select label='Status' options={status} placeholder='Status' />
-              <Form.Field id='form-textarea-control-opinion' control={Input} label='Inisiator Kelas' text={profile.nickname} value={profile.nickname} disabled/>
-              <Form.Field id='form-button-control-public' control={Button} content='Buat Kelas' positive/>
-          </Form>
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Field>
+                <label>Nama Kelas</label>
+                <input id='name' placeholder='Nama Kelas' onChange={this.handleChange}/>
+              </Form.Field>
+              <Form.Field
+                  id='address'
+                  control={TextArea}
+                  label='Alamat'
+                  placeholder='Alamat'
+                  onChange={this.handleChange}
+              />
+              <Form.Field
+                  id='description'
+                  control={TextArea}
+                  label='Deskripsi'
+                  placeholder='Deskripsi'
+                  onChange={this.handleChange}
+              />
+              <Form.Field>
+                <label>Target Donasi</label>
+                <input id='total_donation' placeholder='IDR' onChange={this.handleChange}/>
+              </Form.Field>
+              <Form.Field>
+                <label>Kategori</label>
+                  <select id='category' name='category' onChange={this.handleChange}>
+                    <option value='' hidden>Pilih Kategori</option>
+                    <option value='5a93910ea7b07f3b406f3eb9'>IT dan Software</option>
+                    <option value='5a939129a7b07f3b406f3eba'>Seni dan Desain</option>
+                    <option value='5a93912fa7b07f3b406f3ebb'>Bahasa</option>
+                    <option value='5a93913aa7b07f3b406f3ebc'>Bisnis dan Marketing</option>
+                    <option value='5a939140a7b07f3b406f3ebd'>Pengembangan Diri</option>
+                    <option value='5a939148a7b07f3b406f3ebe'>Hobi dan Gaya Hidup</option>
+                    <option value='5a939153a7b07f3b406f3ebf'>Agama</option>
+                    <option value='5a93915ba7b07f3b406f3ec0'>Persiapan Ujian</option>
+                    <option value='5a939164a7b07f3b406f3ec1'>Kesehatan</option>
+                    <option value='5a93916ca7b07f3b406f3ec2'>Akademik</option>
+                  </select>
+              </Form.Field>
+              <Form.Field>
+                <label>Status</label>
+                  <select id='status' name='status' onChange={this.handleChange}>
+                    <option value='' hidden>Pilih Status</option>
+                    <option value='Darurat'>Darurat</option>
+                    <option value='Tidak Darurat'>Tidak Darurat</option>
+                  </select>
+              </Form.Field>
+              <Form.Field>
+                <label>Inisiator Kelas</label>
+                <input id='created_by' value={profile.nickname} disabled onChange={this.handleChange}/>
+              </Form.Field>
+              <Button type='submit' positive>Buat Kelas</Button>
+            </Form>
         </Grid.Column>
       </Grid>
     )

@@ -2,7 +2,45 @@ import React, { Component } from 'react'
 import { Grid, Modal, Form, Button, Icon, Input } from 'semantic-ui-react'
 
 export default class Donasi extends Component {
+  state = {
+    class: '',
+    donatur: '',
+    amount: '',
+  }
+
+  handleChange = event => {
+    this.setState({
+      class: document.getElementById('class').value,
+      donatur: document.getElementById('donatur').value,
+      amount: document.getElementById('amount').value,
+    });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const data = {
+      class : this.state.class,
+      donatur : this.state.donatur,
+      amount : this.state.amount,
+    }
+
+    const { getAccessToken } = this.props.auth
+
+    const config = {
+      headers: {
+        'Authorization' : `Bearer ${getAccessToken()}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }
+    }
+
+    axios.post('http://api-mulaibelajar.herokuapp.com/api/donation', querystring.stringify(data), config)
+    console.log(this.state);
+  }
+
   render() {
+    const { classes } = this.state
     return(
       <Modal className='modal-box' dimmer='blurring' trigger={
         <Button icon labelPosition='right' fluid positive>
@@ -15,10 +53,11 @@ export default class Donasi extends Component {
            <Modal.Description>
               <Grid columns={1} padded>
                  <Grid.Column>
-                    <Form>
-                      <Form.Field id='form-input-control-first-name' control={Input} label='Donatur' text='Nama' disabled />
-                      <Form.Field id='form-input-control-first-name' control={Input} label='Jumlah Donasi' placeholder='IDR' />
-                      <Form.Field id='form-button-control-public' control={Button} content='Donasi Sekarang' positive/>
+                    <Form onSubmit={this.handleSubmit}>
+                      <Form.Field id='class' control={Input} label='Kelas' value={classes.name} disabled onChange={this.handleChange}/>
+                      <Form.Field id='donatur' control={Input} label='Donatur' placeholder='Donatur' onChange={this.handleChange}/>
+                      <Form.Field id='amount' control={Input} label='Jumlah Donasi' placeholder='IDR' onChange={this.handleChange}/>
+                      <Button type='submit' positive>Donasi Sekarang</Button>
                     </Form>
                  </Grid.Column>
               </Grid>
