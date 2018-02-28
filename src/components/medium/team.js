@@ -5,7 +5,7 @@ const ImageExampleCircular = () => (
   <div>
   <Grid columns={1} padded>
    <Grid.Column textAlign='center'>
-     <h1 className='contact-header'>Tim Mulai Belajar</h1>
+     <h1>Tim Mulai Belajar</h1>
    </Grid.Column>
   </Grid>
   <Grid columns={5} padded>
