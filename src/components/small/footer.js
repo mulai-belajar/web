@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Image, Grid, List } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+
 export default class Footer extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
@@ -21,9 +23,9 @@ export default class Footer extends Component {
         </Grid.Column>
         <Grid.Column textAlign='right'>
           <List link className='footer-menu'>
-            <List.Item as='a' color='white'><a href='' rel="noopener noreferrer">Tentang</a></List.Item>
-            <List.Item as='a'><a href=''>FAQ</a></List.Item>
-            <List.Item as='a'><a href='' rel="noopener noreferrer">Kontak</a></List.Item>
+            <Link to='/faq'><List.Item as='a' color='white'>FAQ</List.Item></Link>
+            <Link to='/team'><List.Item as='a' color='white'>Team</List.Item></Link>
+            <Link to='/tentang'><List.Item as='a' color='white'>Tentang</List.Item></Link>
           </List>
         </Grid.Column>
       </Grid.Row>

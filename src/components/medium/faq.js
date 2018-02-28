@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Accordion, Icon } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 export default class AccordionExampleStyled extends Component {
   state = { activeIndex: 0 }
@@ -25,8 +26,7 @@ export default class AccordionExampleStyled extends Component {
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 0}>
           <p>
-            <a href="https://mulaibelajar.gitbooks.io/preparation/" rel="noopener noreferrer"
-            target="_blank"> Mulai Belajar</a> adalah platform crowd funding untuk membuat
+            <Link to='/'>Mulai Belajar</Link> adalah platform crowd funding untuk membuat
             kelas baru sesuai dengan kategori yang telah disediakan. User dapat memulai
             membuat pengajuan kelas baru atau memilih kelas yang telah tersedia dan menjadi
             donatur.

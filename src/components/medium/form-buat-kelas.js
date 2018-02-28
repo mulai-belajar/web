@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import { Form, TextArea, Button, Grid, Image, Card, Header } from 'semantic-ui-react'
+import { Input, Label, Form, TextArea, Button, Grid, Image, Card, Header } from 'semantic-ui-react'
 import axios from 'axios'
 import querystring from 'querystring'
+import swal from 'sweetalert'
 
 export default class FormKelas extends Component {
   state = {
@@ -50,7 +51,20 @@ export default class FormKelas extends Component {
     }
 
     axios.post(`${process.env.REACT_APP_API_URL}/class`, querystring.stringify(data), config)
-    console.log(querystring.stringify(data));
+    .then((response) => {
+      swal({
+        title: 'Selamat',
+        text: 'Anda telah berhasil membuat kelas baru',
+        icon: 'success',
+        button: 'Lihat'
+      }).then(okay => {
+         if (okay) {
+          window.location.href = 'http://localhost:3000'
+        }
+      })
+    }).catch((error) => {
+      swal('Maaf', 'Silakan coba kembali', 'error')
+    })
   }
 
   componentWillMount() {
@@ -104,8 +118,11 @@ export default class FormKelas extends Component {
               />
               <Form.Field>
                 <label>Target Donasi</label>
-                <input id='total_donation' placeholder='IDR' onChange={this.handleChange}/>
-              </Form.Field>
+                <Input id='total_donation' labelPosition='right' type='number' onChange={this.handleChange}>
+                  <Label basic>IDR</Label>
+                  <input/>
+                </Input>
+               </Form.Field>
               <Form.Field>
                 <label>Kategori</label>
                   <select id='category' name='category' onChange={this.handleChange}>

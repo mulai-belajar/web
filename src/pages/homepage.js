@@ -11,7 +11,7 @@ class Homepage extends Component {
       render() {
      return (
        <div className="App">
-       <Grid columns={1}>
+       <Grid centered columns={1}>
          <Grid.Column>
            <Slides />
          </Grid.Column>
@@ -21,11 +21,8 @@ class Homepage extends Component {
        </Grid.Column>
      </Grid.Row>
 
-     <Grid.Row columns={2}>
-       <Grid.Column width={3}>
-         <Sidebar/>
-       </Grid.Column>
-        <Grid.Column width={13}>
+     <Grid.Row columns={1}>
+        <Grid.Column>
           <Kelaslist/>
         </Grid.Column>
      </Grid.Row>
