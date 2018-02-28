@@ -10,7 +10,7 @@ export default class Sidebar extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3333/api/category`)
+    axios.get(`http://api-mulaibelajar.herokuapp.com/api/category`)
       .then(response => this.setState({ categories: response.data.data }))
       .catch(error => this.setState({ message: error.message }))
   }

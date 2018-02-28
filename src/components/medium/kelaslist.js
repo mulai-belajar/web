@@ -16,7 +16,7 @@ export default class Kelaslist extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3333/api/class`)
+    axios.get(`http://api-mulaibelajar.herokuapp.com/api/class`)
       .then(response => this.setState({ classes: response.data.data }))
       .catch(error => this.setState({ message: error.message }))
   }
