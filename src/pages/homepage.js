@@ -18,9 +18,6 @@ class Homepage extends Component {
         <Grid.Column>
           <Slides/>
         </Grid.Column>
-        <div>
-          <br/>
-        </div>
 
         <Grid.Row columns={1}>
           <Grid.Column>
