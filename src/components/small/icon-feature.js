@@ -3,8 +3,8 @@ import { Grid, Image, Header } from 'semantic-ui-react'
 
 const Iconfeature = () => (
   <Grid centered columns={1} padded>
-    <Grid.Column>
-      <Header size='large'>Kenapa mulaibelajar.com</Header>
+    <Grid.Column textAlign='center'>
+      <Header size='huge'>Kenapa Mulai Belajar ?</Header>
     </Grid.Column>
     <Grid.Row className='Featured' columns={4}>
       <Grid.Column>
