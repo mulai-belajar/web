@@ -3,6 +3,7 @@ import '../App.css';
 import {Grid, Segment, Image, Step} from 'semantic-ui-react'
 import Footer from '../components/small/footer'
 import Navbar from '../components/small/navbar'
+import Slides from '../components/medium/slides'
 class Tentang extends Component {
   render() {
     return (<div>
@@ -15,7 +16,7 @@ class Tentang extends Component {
 
         <div className='segment-about'>
 
-          <Segment.Group >
+          <Segment.Group>
             <Segment>
               <h3>Apa itu Mulai Belajar?</h3>
             </Segment>
