@@ -1,10 +1,13 @@
 import React from 'react'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid, Image, Header } from 'semantic-ui-react'
 
 const Iconfeature = () => (
   <Grid>
 
     <Grid.Row className='Featured' columns={4}>
+      <Grid.Column>
+        <Header size='medium'>Kenapa mulaibelajar.com</Header>
+      </Grid.Column>
       <Grid.Column>
         <Image src='/images/care.png' />
         <h4>Kemudahan berbagi</h4>
