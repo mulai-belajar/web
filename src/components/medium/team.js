@@ -3,7 +3,9 @@ import { Image, Grid, Icon, Card } from 'semantic-ui-react'
 
 const ImageExampleCircular = () => (
   <div>
-   <h1 className='contact-header'>Bertemu dengan Tim</h1>
+   <Grid.Column textAlign='center'>
+     <h1 className='contact-header'>Tim Mulai Belajar</h1>
+   </Grid.Column>
   <Grid columns={5} padded>
    <Grid.Column>
      <Card>
