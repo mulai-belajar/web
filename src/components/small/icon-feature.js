@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Image, Header } from 'semantic-ui-react'
 
 const Iconfeature = () => (
-  <Grid centered>
+  <Grid centered columns={1} padded>
     <Grid.Column>
       <Header size='large'>Kenapa mulaibelajar.com</Header>
     </Grid.Column>
