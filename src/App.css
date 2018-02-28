@@ -1,5 +1,9 @@
 body {}
 
+p {
+  text-align: justify;
+}
+
 .navigasi {
   background-color: #008884;
   height: auto;
@@ -31,6 +35,9 @@ body {}
   margin-top: 15px;
   background-color: #008884;
   color: white;
+  position: relative;
+  left: 0;
+  bottom: 0;
 }
 
 .aligned {
@@ -79,9 +86,21 @@ body {}
   border-radius: 4px;
 }
 
+.accordion, .accordion-title {
+  margin-left: 157px;
+  margin-bottom: 25px;
+  justify-content: center !important;
+  align-items: center !important;
+  align-content: center !important;
+}
+
 .logo {
   width: 95px;
   height: 65px;
+}
+
+.contact-header {
+  margin-left: 483px;
 }
 
 .box-list {
@@ -230,6 +249,13 @@ body {}
   text-align: center !important;
 }
 
+.donation-content {
+  text-align: justify;
+  padding-left: 150px !important;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
 .table-box {
   width: 92% !important;
   font-size: 12px !important;
@@ -247,7 +273,21 @@ body {}
   padding-bottom: 45px;
 }
 
+.segment-about {
+  margin: 50px 100px;
+}
+
+.how-to-donate {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.about-logo {
+  margin-right: 10px;
+}
+
 .modal-box {
-  left:20% !important;
+  left: 20% !important;
   width:60% !important;
 }

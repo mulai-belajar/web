@@ -9,10 +9,6 @@ class Tentang extends Component {
 
       <Grid columns={1}>
 
-        <Grid.Column>
-          <Navbar/>
-        </Grid.Column>
-
         <div className='segment-about'>
 
           <Segment.Group >

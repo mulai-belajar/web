@@ -5,6 +5,7 @@ import {Grid} from 'semantic-ui-react'
 import Footer from '../components/small/footer'
 import '../App.css';
 import Kelaslist from '../components/medium/kelaslist'
+import Slides from '../components/medium/slides'
 
 class Homepage extends Component {
       render() {
@@ -12,6 +13,7 @@ class Homepage extends Component {
        <div className="App">
        <Grid columns={1}>
          <Grid.Column>
+           <Slides />
          </Grid.Column>
      <Grid.Row columns={1}>
        <Grid.Column>

@@ -7,6 +7,9 @@ import history from '../auth/history'
 import Profile from '../pages/profile'
 import Home from '../pages/homepage'
 import Kelas from '../components/medium/form-buat-kelas'
+import Faq from '../components/medium/faq'
+import Tentang from '../pages/tentang'
+import Team from '../components/medium/team'
 
 const auth = new Auth()
 
@@ -40,6 +43,9 @@ export const makeMainRoutes = () => {
             handleAuthentication(props);
             return <Callback {...props} />
           }}/>
+        <Route path="/faq" render={(props) => <Faq auth={auth} {...props} />} />
+        <Route path="/tentang" render={(props) => <Tentang auth={auth} {...props} />} />
+        <Route path="/team" render={(props) => <Team auth={auth} {...props} />} />
         </div>
       </Router>
   );
