@@ -20,9 +20,6 @@ class Slides extends React.Component{
         <div><img className='foto' src="./images/kelas-it.jpg" alt=""/></div>
       </Slider>
     </div>
-
-
-
     );
   }
 }

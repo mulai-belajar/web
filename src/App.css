@@ -100,6 +100,10 @@ p {
   height: 65px;
 }
 
+.contact-header {
+  margin-left: 483px;
+}
+
 .box-list {
   height: auto !important;
   width: 92% !important;
