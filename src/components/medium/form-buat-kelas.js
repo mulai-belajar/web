@@ -59,7 +59,7 @@ export default class FormKelas extends Component {
         button: 'Lihat'
       }).then(okay => {
          if (okay) {
-          window.location.href = process.env.REACT_APP_URL
+          <Redirect to='/' push />
         }
       })
     }).catch((error) => {

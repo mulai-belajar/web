@@ -6,6 +6,7 @@ import Auth from '../../auth/auth'
 import querystring from 'querystring'
 import swal from 'sweetalert'
 import Currency from 'react-currency-formatter'
+import { Redirect } from 'react-router-dom'
 
 const auth = new Auth()
 
@@ -52,7 +53,7 @@ export default class Kelaslist extends Component {
         button: 'Kembali'
       }).then(okay => {
          if (okay) {
-          window.location.href = process.env.REACT_APP_URL
+          <Redirect to='/' push />
         }
       })
     }).catch((error) => {
