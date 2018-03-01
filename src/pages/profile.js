@@ -61,7 +61,23 @@ export default class Profile extends Component {
               <Grid.Column width={13}>
                 <Card.Header>
                   <Header size='medium'>{classes.name}</Header>
-                  Dibuat pada : {classes.createdAt}
+                  <Header size='tiny'>Dibuat pada : {classes.createdAt}</Header>
+                  <Header size='tiny'>
+                    Donasi :
+                    IDR&nbsp;
+                    <Currency
+                      quantity={classes.now_donation}
+                      pattern="##,### "
+                      group="."
+                    />
+                    /
+                    IDR&nbsp;
+                    <Currency
+                      quantity={classes.total_donation}
+                      pattern="##,### "
+                      group="."
+                    />
+                  </Header>
                 </Card.Header>
               </Grid.Column>
               <Grid.Column width={3}>
