@@ -7,18 +7,17 @@ class Slides extends React.Component{
     var settings = {
       dots: true,
       autoplay: true,
-      autoplaySpeed: 3000
+      autoplaySpeed: 5000,
+      arrows: true
     }
     return (
     <div className='slick-slider'>
       <Slider {...settings} >
-        <div><img className='foto' src="https://s.chirpstory.com/uploads/20170306/ba330c3f327e2afd888e5bd7b3abd1b5.JPG" alt=""/></div>
-        <div><img className='foto' src="https://s.chirpstory.com/uploads/20170306/ba330c3f327e2afd888e5bd7b3abd1b5.JPG" alt=""/></div>
+        <div><img className='foto' src="./images/anak-anak.jpg" alt=""/></div>
+        <div><img className='foto' src="./images/kelasmusik.jpg" alt=""/></div>
+        <div><img className='foto' src="./images/kelas-it.jpg" alt=""/></div>
       </Slider>
     </div>
-
-
-
     );
   }
 }
