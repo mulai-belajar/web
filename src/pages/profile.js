@@ -26,7 +26,7 @@ export default class Profile extends Component {
       getProfile((err, profile) => {
         this.setState({ profile })
 
-        axios.get(`http://localhost:3333/api/class/user/${this.state.profile.nickname}`, config)
+        axios.get(`${process.env.REACT_APP_API_URL}/class/user/${this.state.profile.nickname}`, config)
           .then(response => this.setState({ classes: response.data.data }))
           .catch(error => this.setState({ message: error.message }))
       })
