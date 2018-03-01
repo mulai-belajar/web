@@ -7,7 +7,8 @@ p {
 .navigasi {
   background-color: #008884;
   height: auto;
-  margin-bottom: 15px;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
 }
 
 .navigasiright {
