@@ -42,7 +42,7 @@ export default class AccordionExampleStyled extends Component {
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 1}>
           <p>
-            Anda dapat mentransfer melalui Bank Impact Byte dengan nomor rekening 1234 5678 1234 
+            Anda dapat mentransfer melalui Bank Impact Byte dengan nomor rekening 1234 5678 1234
             atas nama Mulai Belajar. Konfirmasi pembayaran dengan mengirim
             email ke info.mulaibelajar@gmail.com
           </p>
@@ -55,9 +55,7 @@ export default class AccordionExampleStyled extends Component {
         <Accordion.Content active={activeIndex === 2}>
           <p>
             Anda dapat membuat halaman kelas secara gratis. Untuk setiap donasi yang
-            terkumpul, Mulai Belajar mengenakan biaya administrasi platform (5%) kecuali
-            untuk kategori zakat dan bencana alam yang diinisiasi oleh lembaga resmi /
-            NGO (biaya adminisitrasi 0%)
+            terkumpul, Mulai Belajar mengenakan biaya administrasi platform (5%).
           </p>
         </Accordion.Content>
 
