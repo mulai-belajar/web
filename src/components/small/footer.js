@@ -13,7 +13,7 @@ export default class Footer extends Component {
         <Grid.Row>
         <Grid.Column >
           <a href="www.mulaibelajar.com" title='Mulaibelajar.com' rel="noopener noreferrer" target="_blank">
-            <Image src='/images/logo-mb.png' className="footer-logo" position='left' alt='Mulaibelajar.com'/>
+            <Link to='/'><Image src='/images/logo-mb.png' className="footer-logo" position='left' alt='Mulaibelajar.com'/></Link>
           </a>
         </Grid.Column>
         <Grid.Column>

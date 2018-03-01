@@ -1,4 +1,6 @@
-body {}
+body {
+  overflow-y:visible;
+}
 
 p {
   text-align: justify;
@@ -290,4 +292,8 @@ p {
 .modal-box {
   left: 20% !important;
   width:60% !important;
+}
+
+.swal-text {
+  text-align: center !important;
 }

@@ -6,7 +6,6 @@ import Auth from '../../auth/auth'
 import querystring from 'querystring'
 import swal from 'sweetalert'
 import Currency from 'react-currency-formatter'
-import { Redirect } from 'react-router-dom'
 
 const auth = new Auth()
 
@@ -48,12 +47,12 @@ export default class Kelaslist extends Component {
     .then((response) => {
       swal({
         title: 'Terima Kasih',
-        text: 'Anda telah membantu kelas mereka',
+        text: 'Silakan Transfer ke Bank Impact Byte dengan nomor rekening 1234 5678 1234 atas nama Mulai Belajar. Konfirmasi pembayaran dengan mengirim email ke info.mulaibelajar@gmail.com',
         icon: 'success',
         button: 'Kembali'
       }).then(okay => {
          if (okay) {
-          <Redirect to='/' push />
+          window.location = `${process.env.REACT_APP_URL}`
         }
       })
     }).catch((error) => {

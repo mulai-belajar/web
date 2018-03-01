@@ -18,7 +18,7 @@ export default class Navbar extends Component {
       <div>
       <Menu inverted className='no-border-radius teal'>
         <Menu.Menu position='left'>
-          <Image src='/images/logo-mb.png' className="App-logo" alt="logo"/>
+          <Link to='/'><Image src='/images/logo-mb.png' className="App-logo" alt="logo"/></Link>
         </Menu.Menu>
         <Menu.Menu position='right'>
               <Menu.Item>
